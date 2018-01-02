@@ -1,0 +1,10 @@
+com/cognitive/ceppoc/commons/event/transaction/TransactionType.class
+com/cognitive/ceppoc/commons/event/transaction/Transaction.class
+com/cognitive/ceppoc/commons/consumer/BaseEventConsumer.class
+com/cognitive/ceppoc/transaction/entity/OperationType.class
+com/cognitive/ceppoc/commons/event/transaction/InstrumentType.class
+com/cognitive/ceppoc/transaction/entity/Card.class
+com/cognitive/ceppoc/transaction/entity/Instrument.class
+com/cognitive/ceppoc/commons/producer/BaseEventProducer.class
+com/cognitive/ceppoc/transaction/entity/Account.class
+com/cognitive/ceppoc/commons/props/CommonProps.class

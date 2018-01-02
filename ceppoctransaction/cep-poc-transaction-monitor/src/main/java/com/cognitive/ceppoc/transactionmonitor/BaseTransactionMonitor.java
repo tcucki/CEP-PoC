@@ -35,7 +35,7 @@ public abstract class BaseTransactionMonitor implements Runnable {
     @Override
     public void run() {
         Consumer<String, String> consumer = createConsumer();
-        int giveUp = 1000;
+        int giveUp = 10000;
         int noRecordsCount = 0;
 
         ObjectMapper mapper = new ObjectMapper();

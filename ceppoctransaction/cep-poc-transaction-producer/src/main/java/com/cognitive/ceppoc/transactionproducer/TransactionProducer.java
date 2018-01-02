@@ -41,7 +41,7 @@ public class TransactionProducer implements ApplicationListener<ApplicationReady
 
     @Override
     public void onApplicationEvent(ApplicationReadyEvent event) {
-        produceTransactions(1000);
+        produceTransactions(10000);
     }
 
     private void produceTransactions(int totalOperations) {

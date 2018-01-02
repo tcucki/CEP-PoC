@@ -40,7 +40,7 @@ public class TransactionConsumer implements ApplicationListener<ApplicationReady
 
     private void listenTransactionEvents() {
         Consumer<Long, String> consumer = baseEventConsumer.createConsumer();
-        int giveUp = 1000;
+        int giveUp = 10000;
         int noRecordsCount = 0;
 
         ObjectMapper mapper = new ObjectMapper();

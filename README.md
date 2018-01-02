@@ -18,7 +18,7 @@ origin int,\
 transactiontype varchar,\
 instrumenttype varchar,\
 amount double,\
-strunmentid bigint) \
+instrumentid bigint) \
 with (kafka_topic='transaction', value_format='JSON');
 ```
 

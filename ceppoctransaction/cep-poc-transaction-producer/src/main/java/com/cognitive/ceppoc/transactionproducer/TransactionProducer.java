@@ -85,7 +85,7 @@ public class TransactionProducer implements ApplicationListener<ApplicationReady
     }
 
     private void logTransaction(Transaction transaction) {
-        LOGGER.info("Transaction {}\t{}\t\t{}\t{}\t{}\t{}\t{}",
+        LOGGER.info("Transaction {}\t{}\t{}\t{}\t{}\t{}\t{}",
                 transaction.getId(),
                 transaction.getTransactionType(),
                 transaction.getInstrumentType(),

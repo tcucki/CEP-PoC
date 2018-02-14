@@ -55,19 +55,19 @@ public class TransactionHandler {
     private void doCreateInstrument(InstrumentType instrumentType, Long instrumentId, BigDecimal amount) {
         if (InstrumentType.ACCOUNT.equals(instrumentType)) {
             if (accounts.containsKey(instrumentId)) {
-                LOGGER.error("Account\t{} exists", instrumentId);
+                LOGGER.error("{}\t{} exists", instrumentType, instrumentId);
             } else {
                 Account account = new Account(instrumentId, amount);
                 accounts.put(instrumentId, account);
-                LOGGER.info("Account\t{}\t{} has been created", instrumentId, amount);
+                LOGGER.info("{}\t{}\t{} has been created", instrumentType, instrumentId, amount);
             }
         } else {
             if (cards.containsKey(instrumentId)) {
-                LOGGER.error("Card\t{} exists", instrumentId);
+                LOGGER.error("{}\t{} exists", instrumentType, instrumentId);
             } else {
                 Card card = new Card(instrumentId, amount);
                 cards.put(instrumentId, card);
-                LOGGER.info("Card\t{}\t{} has been created", instrumentId, amount);
+                LOGGER.info("{}\t{}\t{} has been created", instrumentType, instrumentId, amount);
             }
         }
     }
@@ -83,7 +83,7 @@ public class TransactionHandler {
         if (instruments.containsKey(instrumentId)) {
             instrument = instruments.get(instrumentId);
             instruments.remove(instrumentId);
-            LOGGER.info("{}\t{} {} destroyed", instrumentType, instrumentId, instrument.getBalance());
+            LOGGER.info("{}\t{}\t{} destroyed", instrumentType, instrumentId, instrument.getBalance());
         } else {
             LOGGER.error("{}\t{} not found", instrumentType, instrumentId);
         }

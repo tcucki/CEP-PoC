@@ -21,7 +21,7 @@
 		</layout>
 	</appender>
 
-	<logger name="com.cognitive.ceppoc.transactionproducer.TransactionProducer" level="debug" additivity="false">
+	<logger name="com.cognitive.ceppoc.transactionconsumer.TransactionHandler" level="debug" additivity="false">
 		<appender-ref ref="TX_APPENDER" />
 	</logger>
 

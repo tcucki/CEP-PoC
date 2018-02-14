@@ -21,6 +21,8 @@ public class TransactionCreator {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TransactionCreator.class);
 
+    private static final int MAX_COUNT_CARDS = 15;
+
     public static final int DEFAULT_ORIGIN = 0;
 
     private List<Account> accounts;
@@ -110,6 +112,9 @@ public class TransactionCreator {
     }
 
     private List<Transaction> createCard() {
+        if (cards.size() >= MAX_COUNT_CARDS) {
+            return null;
+        }
         Account account = getAccount();
         if (account == null) {
             return null;
